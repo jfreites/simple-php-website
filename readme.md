@@ -1,3 +1,3 @@
-## Simnple PHP website
+## Simple PHP website
 
 WIP

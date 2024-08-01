@@ -6,7 +6,12 @@ function config($key = '')
         'title' => 'Simple PHP website',
         'site_url' => '',
         'pretty_url' => false,
-        //'router' => [],
+        'router' => [
+            '' => 'Home',
+            'about-us' => 'About us',
+            'services' => 'Services',
+            'contact' => 'Contact',
+        ],
         'template_path' => 'template',
         'content_path' => 'content',
         'version' => 'v1.0',

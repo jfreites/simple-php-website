@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        nav function here
+        <?php render_menu(); ?>
     </header>
 
     <main>
@@ -18,7 +18,7 @@
     </main>
 
     <footer>
-        <p>&copy; <?php echo date('Y'); ?> </br> <?php site_version() ?></p>
+        <p><small>&copy; <?php echo date('Y'); ?> <?php site_name() ?> - <?php site_version() ?></small></p>
     </footer>
 </body>
 
