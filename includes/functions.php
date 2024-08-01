@@ -18,7 +18,13 @@ function site_name()
 
 function page_content()
 {
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+    if (config('pretty_url')) {
+        $page = isset($_SERVER['REQUEST_URI']) ? rtrim($_SERVER['REQUEST_URI'], '/') : 'home';
+        // fix for the homepage
+        $page = empty($page) ? 'home' : $page;
+    } else {
+        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+    }
     $path = getcwd() . '/' . config('content_path') . '/' . $page . '.phtml';
 
     if (!file_exists($path)) {
